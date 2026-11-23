@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>StudyDeck – Student Task & Deadline Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side"><div class="logo"><i>✓</i>StudyDeck</div><div id="sideNav"></div></aside>
+  <main class="main"><div id="view"></div></main>
+</div>
+<nav class="mnav" id="mNav"></nav>
+
+<dialog id="modal"><form class="f" id="form" method="dialog">
+  <h2 id="mTitle" style="margin:0">Add Task</h2>
+  <label>Title<input id="fTitle" required maxlength="80" placeholder="e.g. Solve linked list problems"></label>
+  <label>Description<textarea id="fDesc" rows="3" placeholder="Optional notes"></textarea></label>
+  <div class="two"><label>Subject<select id="fSub"></select></label><label>Due date<input type="date" id="fDue" required></label></div>
+  <div class="two"><label>Priority<select id="fPri"><option>High</option><option selected>Medium</option><option>Low</option></select></label>
+  <label>Status<select id="fSta"><option>Pending</option><option>In Progress</option><option>Completed</option></select></label></div>
+  <div class="acts"><button type="button" class="btn ghost" id="fCancel">Cancel</button><button class="btn" id="fSave">Save Task</button></div>
+</form></dialog>
+
+<dialog id="confirm"><div class="f"><h2 style="margin:0">Delete task?</h2><p id="cMsg" style="color:var(--muted)"></p>
+  <div class="acts"><button class="btn ghost" id="cNo">Cancel</button><button class="btn danger" id="cYes">Delete</button></div></div></dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
